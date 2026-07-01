@@ -28,11 +28,30 @@ body {
   background: #fff;
   border-bottom: 3px double #222;
   padding: 28px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: padding 0.3s, border-bottom 0.3s;
+}
+
+.masthead.collapsed {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .masthead-inner {
   text-align: center;
   padding-bottom: 16px;
+  transition: padding 0.3s, max-height 0.3s, opacity 0.3s;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.masthead.collapsed .masthead-inner {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 .site-title {
@@ -62,6 +81,12 @@ body {
   gap: 32px;
   padding: 12px 0;
   border-top: 1px solid #e0e0e0;
+  transition: padding 0.3s;
+}
+
+.masthead.collapsed .nav {
+  padding: 8px 0;
+  border-top: none;
 }
 
 .nav-link {

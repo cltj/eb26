@@ -111,5 +111,12 @@
     </div>
   </footer>
 
+  <script>
+    const masthead = document.querySelector('.masthead');
+    window.addEventListener('scroll', () => {
+      masthead.classList.toggle('collapsed', window.scrollY > 80);
+    });
+  </script>
+
 </body>
 </html>

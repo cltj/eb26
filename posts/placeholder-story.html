@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="New documents reveal the scope of operations previously unknown to the public. Sources confirm multiple agencies are now involved.">
   <meta name="twitter:image" content="https://ppop.lol/images/placeholder-featured.jpg">
 
-  <link rel="stylesheet" href="../style.css?v=20">
+  <link rel="stylesheet" href="../style.css?v=21">
 </head>
 <body>
 
@@ -314,6 +314,13 @@
       const section = document.getElementById('commentsSection');
       section.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Collapse masthead on scroll
+    const masthead = document.querySelector('.masthead');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      masthead.classList.toggle('collapsed', window.scrollY > 80);
+    });
 
     // Show/hide FAB based on scroll position
     const fab = document.getElementById('commentFab');
