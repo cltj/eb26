@@ -527,8 +527,8 @@ body {
   background: #f0ede8;
   padding: 10px 14px;
   border-radius: 4px;
-  margin-bottom: 20px;
-  display: inline-block;
+  margin: 0 -8px 20px;
+  text-align: center;
 }
 
 .related-group-label {
@@ -627,7 +627,9 @@ body {
 }
 
 .related-docs a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 14px;
   text-decoration: none;
   color: rgba(255,255,255,0.85);
@@ -638,6 +640,18 @@ body {
 
 .related-docs a:hover {
   color: #fff;
+}
+
+.related-docs .doc-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.5);
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
 }
 
 /* Tags */
