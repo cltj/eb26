@@ -430,11 +430,25 @@ body {
   font-weight: 700;
   color: #111;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
-  background: linear-gradient(to right, #f1c40f 30%, #fff 30%);
   margin-left: -20px;
   margin-right: -20px;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.article-body h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  background: #f1c40f;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  z-index: 0;
 }
 
 .chapter-number {
@@ -451,7 +465,12 @@ body {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  top: -1px;
+  z-index: 1;
+}
+
+.article-body h2 span,
+.article-body h2 {
+  z-index: 1;
 }
 
 .article-body blockquote {
