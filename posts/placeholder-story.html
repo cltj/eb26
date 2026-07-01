@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="New documents reveal the scope of operations previously unknown to the public. Sources confirm multiple agencies are now involved.">
   <meta name="twitter:image" content="https://ppop.lol/images/placeholder-featured.jpg">
 
-  <link rel="stylesheet" href="../style.css?v=18">
+  <link rel="stylesheet" href="../style.css?v=19">
 </head>
 <body>
 
@@ -188,26 +188,6 @@
     <section class="comments-section" id="commentsSection">
       <h2 class="comments-title">Comments <span class="comments-count">2</span></h2>
 
-      <div class="comments-list">
-        <div class="comment">
-          <div class="comment-header">
-            <span class="comment-author">Jane D.</span>
-            <span class="comment-role comment-role-reader">Reader</span>
-            <time class="comment-date">June 30, 2026 at 3:14 PM</time>
-          </div>
-          <p class="comment-body">This is a placeholder comment. Great reporting on this story.</p>
-        </div>
-
-        <div class="comment">
-          <div class="comment-header">
-            <span class="comment-author">Anonymous</span>
-            <span class="comment-role comment-role-owner">Owner</span>
-            <time class="comment-date">June 30, 2026 at 5:02 PM</time>
-          </div>
-          <p class="comment-body">Another placeholder comment. Looking forward to follow-up coverage.</p>
-        </div>
-      </div>
-
       <div class="comment-form-wrapper">
         <h3 class="comment-form-title">Leave a Comment</h3>
         <p class="comment-notice">Your comment will appear after admin approval.</p>
@@ -225,6 +205,73 @@
         </form>
         <div class="comment-success" id="commentSuccess" style="display:none;">
           Thank you. Your comment has been submitted for review.
+        </div>
+      </div>
+
+      <div class="comments-list">
+        <div class="comment">
+          <div class="comment-header">
+            <span class="comment-author">Jane D.</span>
+            <span class="comment-role comment-role-reader">Reader</span>
+            <time class="comment-date">June 30, 2026 at 3:14 PM</time>
+          </div>
+          <p class="comment-body">This is a placeholder comment. Great reporting on this story.</p>
+          <button class="comment-reply-btn" onclick="toggleReply(this)">Reply</button>
+          <div class="comment-reply-form" style="display:none;">
+            <form onsubmit="handleReply(event, this)">
+              <div class="form-row-3">
+                <input type="text" name="name" placeholder="Name" required class="form-input">
+                <input type="email" name="email" placeholder="Email (not published)" required class="form-input">
+                <select name="role" class="form-select" required>
+                  <option value="reader">Reader</option>
+                  <option value="owner">Owner</option>
+                </select>
+              </div>
+              <textarea name="comment" placeholder="Write your reply..." required class="form-textarea" rows="3"></textarea>
+              <div class="reply-actions">
+                <button type="submit" class="form-submit">Reply</button>
+                <button type="button" class="reply-cancel" onclick="toggleReply(this)">Cancel</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="comment-replies">
+            <div class="comment comment-nested">
+              <div class="comment-header">
+                <span class="comment-author">Bob</span>
+                <span class="comment-role comment-role-reader">Reader</span>
+                <time class="comment-date">June 30, 2026 at 4:01 PM</time>
+              </div>
+              <p class="comment-body">Agreed, this is important reporting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-header">
+            <span class="comment-author">Anonymous</span>
+            <span class="comment-role comment-role-owner">Owner</span>
+            <time class="comment-date">June 30, 2026 at 5:02 PM</time>
+          </div>
+          <p class="comment-body">Another placeholder comment. Looking forward to follow-up coverage.</p>
+          <button class="comment-reply-btn" onclick="toggleReply(this)">Reply</button>
+          <div class="comment-reply-form" style="display:none;">
+            <form onsubmit="handleReply(event, this)">
+              <div class="form-row-3">
+                <input type="text" name="name" placeholder="Name" required class="form-input">
+                <input type="email" name="email" placeholder="Email (not published)" required class="form-input">
+                <select name="role" class="form-select" required>
+                  <option value="reader">Reader</option>
+                  <option value="owner">Owner</option>
+                </select>
+              </div>
+              <textarea name="comment" placeholder="Write your reply..." required class="form-textarea" rows="3"></textarea>
+              <div class="reply-actions">
+                <button type="submit" class="form-submit">Reply</button>
+                <button type="button" class="reply-cancel" onclick="toggleReply(this)">Cancel</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -248,6 +295,19 @@
       e.preventDefault();
       e.target.style.display = 'none';
       document.getElementById('commentSuccess').style.display = 'block';
+    }
+
+    function toggleReply(btn) {
+      const comment = btn.closest('.comment');
+      const form = comment.querySelector('.comment-reply-form');
+      const isVisible = form.style.display !== 'none';
+      form.style.display = isVisible ? 'none' : 'block';
+    }
+
+    function handleReply(e, formEl) {
+      e.preventDefault();
+      const replyForm = formEl.closest('.comment-reply-form');
+      replyForm.innerHTML = '<p style="color:#c9a94e;font-size:0.85rem;margin-top:8px;">Reply submitted for review.</p>';
     }
 
     function toggleComments() {
