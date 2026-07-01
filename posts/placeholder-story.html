@@ -20,11 +20,11 @@
   <meta name="twitter:description" content="New documents reveal the scope of operations previously unknown to the public. Sources confirm multiple agencies are now involved.">
   <meta name="twitter:image" content="https://ppop.lol/images/placeholder-featured.jpg">
 
-  <link rel="stylesheet" href="../style.css?v=22">
+  <link rel="stylesheet" href="../style.css?v=23">
 </head>
 <body>
 
-  <header class="masthead">
+  <header class="masthead post-masthead">
     <div class="container-wide">
       <div class="masthead-inner">
         <a href="../index.html" class="site-title">Placeholder</a>
@@ -322,13 +322,7 @@
       section.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Collapse masthead on scroll
-    const masthead = document.querySelector('.masthead');
-    window.addEventListener('scroll', () => {
-      masthead.classList.toggle('collapsed', window.scrollY > 80);
-      const bm = document.querySelector('.burger-menu');
-      if (bm) bm.classList.remove('open');
-    });
+    // Close burger on click outside
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.burger-btn') && !e.target.closest('.burger-menu')) {
         const bm = document.querySelector('.burger-menu');

@@ -58,8 +58,35 @@ body {
 }
 
 .masthead.collapsed .site-tagline {
-  font-size: 0.75rem;
-  margin-top: 0;
+  display: none;
+}
+
+/* Pre-collapsed on post pages */
+.masthead.post-masthead {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.masthead.post-masthead .masthead-inner {
+  padding: 8px 0;
+  max-height: 60px;
+}
+
+.masthead.post-masthead .site-title {
+  font-size: 1.2rem;
+}
+
+.masthead.post-masthead .site-tagline {
+  display: none;
+}
+
+.masthead.post-masthead .nav {
+  display: none;
+}
+
+.masthead.post-masthead .burger-btn {
+  display: block;
 }
 
 .site-title {
@@ -99,11 +126,12 @@ body {
 /* Burger menu */
 .burger-btn {
   display: none;
-  background: none;
+  background: #111;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 6px;
-  color: #333;
+  padding: 8px;
+  color: #fff;
   position: absolute;
   right: 20px;
   top: 50%;
@@ -111,8 +139,8 @@ body {
 }
 
 .burger-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .masthead.collapsed .burger-btn {
