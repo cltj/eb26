@@ -276,20 +276,19 @@ body {
 /* Hero Image */
 .article-hero {
   margin-bottom: 24px;
+  display: block;
 }
 
 .article-hero img {
   width: 100%;
   border-radius: 4px;
+  display: block;
 }
 
 .article-hero.no-image {
   background: #e8e8e5;
   aspect-ratio: 16/9;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .article-hero.no-image::after {
@@ -497,11 +496,13 @@ body {
 
 .article-image {
   margin: 32px 0;
+  display: block;
 }
 
 .article-image img {
   width: 100%;
   border-radius: 4px;
+  display: block;
 }
 
 .article-image.no-image {
