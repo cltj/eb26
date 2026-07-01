@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Editor - Placeholder</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+  <header class="editor-header">
+    <div class="editor-header-inner">
+      <a href="../index.html" class="editor-logo">Placeholder</a>
+      <span class="editor-label">Post Editor</span>
+      <div class="editor-actions">
+        <button class="btn btn-draft" onclick="saveDraft()">Save Draft</button>
+        <button class="btn btn-publish" onclick="publishPost()">Publish</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="editor-main">
+
+    <!-- INTRO SECTION -->
+    <section class="editor-section">
+      <h2 class="section-heading">Intro</h2>
+
+      <div class="field">
+        <label for="postTitle">Title</label>
+        <input type="text" id="postTitle" placeholder="Enter headline..." class="input-lg">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="postAuthor">Author</label>
+          <input type="text" id="postAuthor" placeholder="Author name">
+        </div>
+        <div class="field">
+          <label for="postDate">Date & Time</label>
+          <input type="datetime-local" id="postDate">
+        </div>
+        <div class="field">
+          <label for="postReadTime">Read Time</label>
+          <input type="text" id="postReadTime" placeholder="e.g. 5 min read">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="postCategory">Category</label>
+        <input type="text" id="postCategory" placeholder="e.g. Investigation, Analysis, Update">
+      </div>
+
+      <div class="field">
+        <label>Hero Image</label>
+        <div class="image-upload" id="heroImageUpload">
+          <input type="file" accept="image/*" onchange="handleImageUpload(this, 'heroPreview', 'heroImageData')">
+          <div class="image-upload-placeholder" id="heroPreview">
+            <span>Click or drag to upload hero image</span>
+          </div>
+          <input type="hidden" id="heroImageData">
+        </div>
+        <input type="text" id="heroCaption" placeholder="Image caption (italic gray text under image)" class="input-caption">
+      </div>
+
+      <div class="field">
+        <label for="postIngress">Ingress / Lead</label>
+        <textarea id="postIngress" rows="3" placeholder="The opening paragraph that summarizes the story..."></textarea>
+      </div>
+    </section>
+
+    <!-- CHAPTERS SECTION -->
+    <section class="editor-section">
+      <h2 class="section-heading">Story</h2>
+      <p class="section-desc">Build your story with chapters. Each chapter can contain text, images, and highlights.</p>
+
+      <div id="chaptersContainer"></div>
+
+      <button class="btn btn-add-chapter" onclick="addChapter()">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add Chapter
+      </button>
+    </section>
+
+    <!-- RELATED SECTION -->
+    <section class="editor-section">
+      <h2 class="section-heading">Related Content</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-heading">Documents & Files</h3>
+        <div id="documentsContainer"></div>
+        <button class="btn btn-add-sm" onclick="addDocument()">+ Add Document</button>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-heading">Related Links</h3>
+        <div id="linksContainer"></div>
+        <button class="btn btn-add-sm" onclick="addLink()">+ Add Link</button>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-heading">Tags</h3>
+        <div class="tags-input-wrapper">
+          <div id="tagsDisplay" class="tags-display"></div>
+          <div class="tags-input-row">
+            <input type="text" id="tagInput" placeholder="Add a tag..." onkeydown="if(event.key==='Enter'){event.preventDefault();addTag()}">
+            <button class="btn btn-add-sm" onclick="addTag()">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="editor-section">
+      <h2 class="section-heading">Preview & Export</h2>
+      <button class="btn btn-preview" onclick="generatePreview()">Generate Preview</button>
+      <div id="previewFrame" class="preview-frame" style="display:none;"></div>
+      <div id="htmlOutput" style="display:none;">
+        <h3 class="subsection-heading" style="margin-top:20px;">HTML Output</h3>
+        <p class="section-desc">Copy this HTML and save it as a file in the <code>posts/</code> folder.</p>
+        <textarea id="htmlCode" class="html-output" rows="12" readonly></textarea>
+        <button class="btn btn-draft" onclick="copyHTML()" style="margin-top:10px;">Copy HTML</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Status Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="editor.js"></script>
+
+</body>
+</html>
