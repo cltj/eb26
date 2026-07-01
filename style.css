@@ -519,16 +519,14 @@ body {
 
 .related-section-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #111;
-  background: #f0ede8;
-  padding: 10px 14px;
-  border-radius: 4px;
-  margin: 0 -8px 20px;
-  text-align: center;
+  letter-spacing: 3px;
+  color: #f0ede8;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 
 .related-group-label {
