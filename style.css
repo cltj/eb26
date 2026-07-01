@@ -820,6 +820,7 @@ body {
 .comment {
   position: relative;
   background: #0a4d30;
+  border: 1px solid #c9a94e;
   border-radius: 18px 18px 18px 4px;
   padding: 16px 20px;
   margin-bottom: 16px;
@@ -879,9 +880,9 @@ body {
 
 /* Comment Form */
 .comment-form-wrapper {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  background: #0a4d30;
+  border: 1px solid #c9a94e;
+  border-radius: 18px;
   padding: 24px;
   margin-top: 24px;
 }
@@ -889,13 +890,13 @@ body {
 .comment-form-title {
   font-size: 1rem;
   margin-bottom: 4px;
-  color: #333;
+  color: #c9a94e;
 }
 
 .comment-notice {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
-  color: #999;
+  color: rgba(255,255,255,0.35);
   font-style: italic;
   margin-bottom: 16px;
 }
@@ -920,19 +921,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   padding: 10px 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #fafaf8;
-  color: #333;
+  border: 1px solid rgba(201,169,78,0.3);
+  border-radius: 10px;
+  background: #0f6b40;
+  color: #fff;
   width: 100%;
   transition: border-color 0.2s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255,255,255,0.35);
 }
 
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: #999;
+  border-color: #c9a94e;
 }
 
 .form-textarea {
@@ -945,25 +951,25 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   padding: 10px 24px;
-  background: #222;
-  color: #fff;
+  background: #c9a94e;
+  color: #0a4d30;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s;
 }
 
 .form-submit:hover {
-  background: #444;
+  background: #b8982f;
 }
 
 .comment-success {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
-  color: #27ae60;
+  color: #c9a94e;
   padding: 16px;
-  background: #f0faf4;
-  border-radius: 4px;
+  background: rgba(201,169,78,0.1);
+  border-radius: 10px;
   margin-top: 12px;
 }
 
