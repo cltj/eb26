@@ -480,14 +480,16 @@ body {
 }
 
 .article-image {
-  margin: 32px 0;
+  margin: 32px auto;
   display: block;
+  text-align: center;
 }
 
 .article-image img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 4px;
   display: block;
+  margin: 0 auto;
 }
 
 .article-image.no-image {
