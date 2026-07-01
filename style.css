@@ -315,6 +315,8 @@ body {
 .article-byline {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 14px;
   padding: 16px 20px;
   background: #c0392b;
@@ -322,8 +324,10 @@ body {
   border-top: none;
 }
 
-.byline-share {
-  margin-left: auto;
+.byline-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .byline-avatar {
