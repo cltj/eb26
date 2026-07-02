@@ -1348,4 +1348,61 @@ body {
   .contact-row {
     grid-template-columns: 1fr;
   }
+
+  .site-brand {
+    gap: 8px;
+  }
+
+  .site-icon-placeholder {
+    width: 16px;
+    height: 16px;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .title-initial {
+    padding: 0 4px;
+  }
+
+  .title-second {
+    padding: 0 4px;
+  }
+
+  .site-tagline {
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
+
+  .nav {
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .nav-link {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+  }
+
+  .nav-initial {
+    padding: 0 3px;
+    font-size: 0.6rem;
+  }
+
+  .masthead.collapsed .site-title,
+  .masthead.post-masthead .site-title {
+    font-size: 1rem;
+  }
+
+  .burger-btn {
+    padding: 6px;
+    right: 12px;
+  }
+
+  .burger-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }
