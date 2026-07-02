@@ -225,23 +225,37 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   font-size: 0.78rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 6px 16px;
-  border-bottom: 2px solid transparent;
+  padding: 7px 16px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid #f1c40f;
   transition: all 0.2s;
+}
+
+.nav-link::after {
+  content: " \203A";
+  font-size: 1.1em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
 }
 
 .nav-link:hover {
   color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
 }
 
 .nav-link.active {
   color: #fff;
-  border-bottom-color: #c0392b;
+  background: rgba(241,196,15,0.1);
+  border-left-color: #f1c40f;
 }
 
 /* Featured Post */
