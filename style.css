@@ -25,7 +25,7 @@ body {
 
 /* Masthead */
 .masthead {
-  background: #111;
+  background: #2a2f2c;
   border-bottom: none;
   padding: 28px 0 0;
   position: sticky;
@@ -139,7 +139,7 @@ body {
 
 .site-tagline {
   font-style: italic;
-  color: rgba(255,255,255,0.35);
+  color: #c0392b;
   margin-top: 4px;
   font-size: 0.95rem;
 }
