@@ -1,0 +1,25 @@
+<section class="comments-section" id="commentsSection">
+  <h2 class="comments-title"><span class="comments-initial">C</span>omments <span class="comments-count"></span></h2>
+
+  <div class="comment-form-wrapper">
+    <h3 class="comment-form-title">Leave a Comment</h3>
+    <p class="comment-notice">Your comment will appear after admin approval.</p>
+    <form class="comment-form">
+      <div class="form-row-3">
+        <input type="text" name="name" placeholder="Name" required class="form-input">
+        <input type="email" name="email" placeholder="Email (not published)" required class="form-input">
+        <select name="role" class="form-select" required>
+          <option value="reader">Reader</option>
+          <option value="owner">Owner</option>
+        </select>
+      </div>
+      <textarea name="comment" placeholder="Write your comment..." required class="form-textarea" rows="4"></textarea>
+      <button type="submit" class="form-submit">Submit Comment</button>
+    </form>
+    <div class="comment-success" style="display:none;">
+      Thank you. Your comment has been submitted for review.
+    </div>
+  </div>
+
+  <div class="comments-list"></div>
+</section>
