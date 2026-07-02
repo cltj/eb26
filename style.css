@@ -224,6 +224,13 @@ body {
   transition: all 0.2s;
 }
 
+.nav-initial {
+  background: #8b0000;
+  color: #fff;
+  padding: 0 4px;
+  margin-right: 1px;
+}
+
 .nav-link::after {
   content: " \203A";
   font-size: 1.1em;
