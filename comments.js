@@ -52,6 +52,12 @@
         '<time class="comment-date">' + esc(c.date) + '</time>' +
       '</div>' +
       '<p class="comment-body">' + esc(c.body) + '</p>' +
+      '<div class="comment-reactions">' +
+        '<button class="reaction-btn" data-emoji="thumbsup"><span class="reaction-icon">&#128077;</span><span class="reaction-count">' + (c.reactions && c.reactions.thumbsup || 0) + '</span></button>' +
+        '<button class="reaction-btn" data-emoji="heart"><span class="reaction-icon">&#10084;&#65039;</span><span class="reaction-count">' + (c.reactions && c.reactions.heart || 0) + '</span></button>' +
+        '<button class="reaction-btn" data-emoji="fire"><span class="reaction-icon">&#128293;</span><span class="reaction-count">' + (c.reactions && c.reactions.fire || 0) + '</span></button>' +
+        '<button class="reaction-btn" data-emoji="eyes"><span class="reaction-icon">&#128064;</span><span class="reaction-count">' + (c.reactions && c.reactions.eyes || 0) + '</span></button>' +
+      '</div>' +
       '<button class="comment-reply-btn">Reply</button>' +
       '<div class="comment-reply-form" style="display:none;">' +
         '<form>' +
@@ -70,6 +76,16 @@
           '</div>' +
         '</form>' +
       '</div>';
+
+    // Reaction buttons
+    div.querySelectorAll('.reaction-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (this.classList.contains('reacted')) return;
+        this.classList.add('reacted');
+        const count = this.querySelector('.reaction-count');
+        count.textContent = parseInt(count.textContent || 0) + 1;
+      });
+    });
 
     // Reply toggle
     div.querySelector('.comment-reply-btn').addEventListener('click', function() {

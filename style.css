@@ -1016,6 +1016,52 @@ body {
   margin-top: 12px;
 }
 
+/* Reactions */
+.comment-reactions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.reaction-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background: #f5f5f3;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.reaction-btn:hover {
+  background: #eee;
+  border-color: #ccc;
+}
+
+.reaction-btn.reacted {
+  background: rgba(192,178,72,0.15);
+  border-color: #c0b248;
+}
+
+.reaction-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.reaction-count {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.reaction-btn.reacted .reaction-count {
+  color: #111;
+  font-weight: 600;
+}
+
 /* Reply button */
 .comment-reply-btn {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
