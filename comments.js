@@ -57,6 +57,8 @@
         '<button class="reaction-btn" data-emoji="heart"><span class="reaction-icon">&#10084;&#65039;</span><span class="reaction-count">' + (c.reactions && c.reactions.heart || 0) + '</span></button>' +
         '<button class="reaction-btn" data-emoji="fire"><span class="reaction-icon">&#128293;</span><span class="reaction-count">' + (c.reactions && c.reactions.fire || 0) + '</span></button>' +
         '<button class="reaction-btn" data-emoji="eyes"><span class="reaction-icon">&#128064;</span><span class="reaction-count">' + (c.reactions && c.reactions.eyes || 0) + '</span></button>' +
+        '<button class="reaction-btn" data-emoji="angry"><span class="reaction-icon">&#128545;</span><span class="reaction-count">' + (c.reactions && c.reactions.angry || 0) + '</span></button>' +
+        '<button class="reaction-btn" data-emoji="shocked"><span class="reaction-icon">&#128562;</span><span class="reaction-count">' + (c.reactions && c.reactions.shocked || 0) + '</span></button>' +
       '</div>' +
       '<button class="comment-reply-btn">Reply</button>' +
       '<div class="comment-reply-form" style="display:none;">' +
