@@ -409,7 +409,7 @@ body {
   flex-wrap: wrap;
   gap: 14px;
   padding: 16px 20px;
-  background: #c0392b;
+  background: #8b0000;
   margin: 0 -20px;
   border-top: none;
 }
@@ -477,7 +477,7 @@ body {
 
 .share-btn:hover {
   background: rgba(255,255,255,0.95);
-  color: #c0392b;
+  color: #8b0000;
   transform: translateY(-2px);
 }
 
