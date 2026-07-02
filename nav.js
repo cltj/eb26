@@ -9,10 +9,9 @@
     .then(html => {
       masthead.innerHTML = html.replace(/\{base\}/g, base);
 
-      // Mark active page and hide Home on index
+      // Mark active page
       masthead.querySelectorAll('.nav-link').forEach(link => {
         if (link.dataset.page === page) link.classList.add('active');
-        if (page === 'index' && link.dataset.page === 'index') link.style.display = 'none';
       });
 
       // Burger menu
