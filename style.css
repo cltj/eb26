@@ -101,6 +101,21 @@ body {
   color: #333;
 }
 
+.site-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.site-icon-placeholder {
+  width: 24px;
+  height: 24px;
+  background: #e8e8e5;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
 .title-initial {
   background: #f1c40f;
   color: #111;
