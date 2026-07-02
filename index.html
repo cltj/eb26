@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placeholder</title>
-  <link rel="stylesheet" href="style.css?v=51">
+  <link rel="stylesheet" href="style.css?v=62">
 </head>
 <body>
 
@@ -12,141 +12,158 @@
 
   <main class="container-wide">
 
-    <section class="tile-grid">
-      <a href="posts/placeholder-story.html" class="tile tile-large tile-breaking">
-        <div class="tile-image">
-          <img src="images/placeholder-featured.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
-        </div>
-        <span class="tile-badge">Breaking</span>
-        <h2 class="tile-headline">Major Developments in EB Operations</h2>
-      </a>
+    <!-- Type 1: Full-width hero -->
+    <a href="posts/placeholder-story.html" class="t1 tile-breaking">
+      <div class="tile-image">
+        <img src="images/placeholder-featured.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
+      </div>
+      <span class="tile-badge">Breaking</span>
+      <h2 class="tile-headline">Major Developments in EB Operations</h2>
+    </a>
 
-      <a href="posts/placeholder-story-2.html" class="tile">
-        <div class="tile-image">
-          <img src="images/placeholder-thumb-1.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
-        </div>
-        <h2 class="tile-headline">Leaked Memo Raises New Questions</h2>
-      </a>
+    <!-- Type 2: 2/3 big text + 1/3 picture, half height of type 1 -->
+    <a href="posts/placeholder-story-2.html" class="t2">
+      <h2 class="t2-headline">Leaked Memo Raises New Questions About EB Leadership</h2>
+      <div class="t2-image">
+        <img src="images/placeholder-thumb-1.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
+      </div>
+    </a>
 
-      <a href="posts/placeholder-story-3.html" class="tile">
+    <!-- Type 3: 2 image tiles in a row -->
+    <div class="t3-row">
+      <a href="posts/placeholder-story-3.html" class="t3">
         <div class="tile-image">
           <img src="images/placeholder-thumb-2.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
         </div>
         <h2 class="tile-headline">Timeline: Key Events So Far</h2>
       </a>
-
-      <a href="posts/placeholder-story-4.html" class="tile">
+      <a href="posts/placeholder-story-4.html" class="t3">
         <div class="tile-image">
           <img src="images/placeholder-thumb-3.jpg" alt="" onerror="this.src='images/story-placeholder.png'">
         </div>
-        <h2 class="tile-headline">Sources Confirm Additional Parties Involved</h2>
+        <h2 class="tile-headline">Sources Confirm Additional Parties</h2>
       </a>
+    </div>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Inside the Call Center Scam Network Targeting Retirees</h2>
-      </a>
+    <!-- Type 5 -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Inside the Call Center Scam Network Targeting Retirees</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Crypto Exchange Vanishes With $40M in User Funds</h2>
-      </a>
+    <!-- Type 4: 2/3 picture with text inside -->
+    <a href="#" class="t4">
+      <div class="tile-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+      <h2 class="tile-headline">Crypto Exchange Vanishes With $40M in User Funds</h2>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Myanmar Compound Workers Describe Forced Labor Conditions</h2>
-      </a>
+    <!-- Type 5: Compact text + small picture -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Myanmar Compound Workers Describe Forced Labor Conditions</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
+    <!-- Type 3 -->
+    <div class="t3-row">
+      <a href="#" class="t3">
         <div class="tile-image">
           <img src="images/story-placeholder.png" alt="">
         </div>
         <h2 class="tile-headline">Fake Investment Apps Flood Southeast Asian Markets</h2>
       </a>
-
-      <a href="#" class="tile">
+      <a href="#" class="t3">
         <div class="tile-image">
           <img src="images/story-placeholder.png" alt="">
         </div>
-        <h2 class="tile-headline">Regional Banks Flag Surge in Romance Scam Transfers</h2>
+        <h2 class="tile-headline">Romance Scam Transfers Surge Across Region</h2>
       </a>
+    </div>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">How Pig Butchering Syndicates Recruit Victims Online</h2>
-      </a>
+    <!-- Type 5 -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Pig Butchering Syndicates Recruit Victims Online</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Philippine Authorities Raid Offshore Gaming Hub</h2>
-      </a>
+    <!-- Type 2 -->
+    <a href="#" class="t2">
+      <h2 class="t2-headline">Philippine Authorities Raid Offshore Gaming Hub in Major Operation</h2>
+      <div class="t2-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Shell Companies Linked to Cross-Border Money Laundering</h2>
-      </a>
+    <!-- Type 4 -->
+    <a href="#" class="t4">
+      <div class="tile-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+      <h2 class="tile-headline">Shell Companies Linked to Cross-Border Money Laundering</h2>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Telegram Channels Selling Stolen Identity Documents</h2>
-      </a>
+    <!-- Type 5 -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Telegram Channels Selling Stolen Identity Documents</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
+    <!-- Type 3 -->
+    <div class="t3-row">
+      <a href="#" class="t3">
         <div class="tile-image">
           <img src="images/story-placeholder.png" alt="">
         </div>
         <h2 class="tile-headline">Whistleblower Exposes Corporate Kickback Scheme</h2>
       </a>
-
-      <a href="#" class="tile">
+      <a href="#" class="t3">
         <div class="tile-image">
           <img src="images/story-placeholder.png" alt="">
         </div>
-        <h2 class="tile-headline">ASEAN Summit Pledges Joint Action on Cybercrime</h2>
+        <h2 class="tile-headline">ASEAN Pledges Joint Action on Cybercrime</h2>
       </a>
+    </div>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Fake Charity Networks Exploit Disaster Relief Donations</h2>
-      </a>
+    <!-- Type 5 -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Fake Charity Networks Exploit Disaster Relief Donations</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Data Breach Exposes Millions of Consumer Records in Thailand</h2>
-      </a>
+    <!-- Type 5 -->
+    <a href="#" class="t5">
+      <h2 class="t5-headline">Data Breach Exposes Millions of Consumer Records in Thailand</h2>
+      <div class="t5-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Former Officials Face Charges in Land Title Fraud Case</h2>
-      </a>
+    <!-- Type 2 -->
+    <a href="#" class="t2">
+      <h2 class="t2-headline">Former Officials Face Charges in Land Title Fraud Case</h2>
+      <div class="t2-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+    </a>
 
-      <a href="#" class="tile">
-        <div class="tile-image">
-          <img src="images/story-placeholder.png" alt="">
-        </div>
-        <h2 class="tile-headline">Investigation: The Rise of AI-Generated Deepfake Scams</h2>
-      </a>
-    </section>
+    <!-- Type 4 -->
+    <a href="#" class="t4">
+      <div class="tile-image">
+        <img src="images/story-placeholder.png" alt="">
+      </div>
+      <h2 class="tile-headline">Investigation: The Rise of AI-Generated Deepfake Scams</h2>
+    </a>
 
   </main>
 
