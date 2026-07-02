@@ -25,8 +25,8 @@ body {
 
 /* Masthead */
 .masthead {
-  background: #fff;
-  border-bottom: 3px double #222;
+  background: #0a4d30;
+  border-bottom: 3px double rgba(201,169,78,0.3);
   padding: 28px 0 0;
   position: sticky;
   top: 0;
@@ -36,8 +36,8 @@ body {
 
 .masthead.collapsed {
   padding: 0;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(201,169,78,0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .masthead-inner {
@@ -64,8 +64,8 @@ body {
 /* Pre-collapsed on post pages */
 .masthead.post-masthead {
   padding: 0;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(201,169,78,0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .masthead.post-masthead .masthead-inner {
@@ -89,29 +89,51 @@ body {
   display: block;
 }
 
+/* Site Brand */
+.site-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.site-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.masthead.collapsed .site-icon,
+.masthead.post-masthead .site-icon {
+  width: 32px;
+  height: 32px;
+}
+
 .site-title {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.6rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #111;
+  color: #fff;
   text-decoration: none;
 }
 
 .site-title:hover {
-  color: #333;
+  color: rgba(255,255,255,0.8);
 }
 
 .site-title-gradient {
-  background: linear-gradient(to right, #f1c40f, #111 50%);
+  background: linear-gradient(to right, #f1c40f, #fff 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .site-title-gradient:hover {
-  background: linear-gradient(to right, #f1c40f, #444 50%);
+  background: linear-gradient(to right, #f1c40f, rgba(255,255,255,0.8) 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -119,7 +141,7 @@ body {
 
 .site-tagline {
   font-style: italic;
-  color: #888;
+  color: rgba(255,255,255,0.5);
   margin-top: 4px;
   font-size: 0.95rem;
 }
@@ -127,9 +149,9 @@ body {
 .nav {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 10px;
   padding: 12px 0;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid rgba(255,255,255,0.1);
   transition: padding 0.3s;
 }
 
@@ -140,8 +162,8 @@ body {
 /* Burger menu */
 .burger-btn {
   display: none;
-  background: #111;
-  border: none;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 4px;
   cursor: pointer;
   padding: 8px;
@@ -200,18 +222,27 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #555;
-  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.78rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 2px 0;
-  transition: color 0.2s;
+  padding: 6px 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  transition: all 0.2s;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+}
+
 .nav-link.active {
-  color: #111;
+  color: #0a4d30;
+  background: #c9a94e;
+  border-color: #c9a94e;
 }
 
 /* Featured Post */
