@@ -220,7 +220,7 @@ body {
   letter-spacing: 1.5px;
   padding: 7px 16px;
   border-left: 3px solid #c0b248;
-  background: linear-gradient(to right, rgba(139,0,0,0.08), #fff 60%);
+  background: linear-gradient(to right, rgba(192,178,72,0.12), #fff 60%);
   transition: all 0.2s;
 }
 
@@ -241,7 +241,7 @@ body {
 
 .nav-link:hover {
   color: #111;
-  background: linear-gradient(to right, rgba(139,0,0,0.12), #fff 60%);
+  background: linear-gradient(to right, rgba(192,178,72,0.18), #fff 60%);
 }
 
 .nav-link:hover::after {
