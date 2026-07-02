@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placeholder</title>
+  <title>Contact - Placeholder</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,48 +16,35 @@
       </div>
       <nav class="nav">
         <a href="archive.html" class="nav-link">Archive</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
       </nav>
       <button class="burger-btn" onclick="document.querySelector('.burger-menu').classList.toggle('open')" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="burger-menu">
+        <a href="index.html">Home</a>
         <a href="archive.html">Archive</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </header>
 
-  <main class="container-wide">
+  <main class="container">
 
-    <section class="tile-grid">
-      <a href="posts/placeholder-story.html" class="tile tile-large">
-        <div class="tile-image">
-          <img src="images/placeholder-featured.jpg" alt="" onerror="this.parentElement.classList.add('no-image')">
-        </div>
-        <h2 class="tile-headline">Breaking: Major Developments in EB Operations</h2>
-      </a>
+    <section class="contact-section">
+      <h1 class="contact-title">Contact</h1>
+      <p class="contact-description">Have a tip, question, or want to get in touch? Use the form below.</p>
 
-      <a href="posts/placeholder-story-2.html" class="tile">
-        <div class="tile-image">
-          <img src="images/placeholder-thumb-1.jpg" alt="" onerror="this.parentElement.classList.add('no-image')">
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.contact-success').style.display='block'; this.reset();">
+        <div class="contact-row">
+          <input type="text" class="contact-input" name="name" placeholder="Your name" required>
+          <input type="email" class="contact-input" name="email" placeholder="Your email" required>
         </div>
-        <h2 class="tile-headline">Leaked Memo Raises New Questions</h2>
-      </a>
-
-      <a href="posts/placeholder-story-3.html" class="tile">
-        <div class="tile-image">
-          <img src="images/placeholder-thumb-2.jpg" alt="" onerror="this.parentElement.classList.add('no-image')">
-        </div>
-        <h2 class="tile-headline">Timeline: Key Events So Far</h2>
-      </a>
-
-      <a href="posts/placeholder-story-4.html" class="tile">
-        <div class="tile-image">
-          <img src="images/placeholder-thumb-3.jpg" alt="" onerror="this.parentElement.classList.add('no-image')">
-        </div>
-        <h2 class="tile-headline">Sources Confirm Additional Parties Involved</h2>
-      </a>
+        <input type="text" class="contact-input" name="subject" placeholder="Subject">
+        <textarea class="contact-textarea" name="message" rows="6" placeholder="Your message..." required></textarea>
+        <button type="submit" class="contact-submit">Send Message</button>
+        <div class="contact-success" style="display:none;">Thanks for reaching out. We'll get back to you soon.</div>
+      </form>
     </section>
 
   </main>
