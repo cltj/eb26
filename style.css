@@ -1199,6 +1199,28 @@ body {
 }
 
 /* Contact Page */
+/* About Page */
+.about-section {
+  padding: 40px 0 60px;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.about-body {
+  max-width: 700px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-body p {
+  margin-bottom: 18px;
+}
+
+/* Contact Page */
 .contact-section {
   padding: 40px 0 60px;
 }
