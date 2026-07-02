@@ -48,7 +48,6 @@
     div.innerHTML =
       '<div class="comment-header">' +
         '<span class="comment-author">' + esc(c.author) + '</span>' +
-        '<span class="comment-role comment-role-' + esc(c.role) + '">' + esc(c.role) + '</span>' +
         '<time class="comment-date">' + esc(c.date) + '</time>' +
       '</div>' +
       '<p class="comment-body">' + esc(c.body) + '</p>' +
@@ -63,13 +62,9 @@
       '<button class="comment-reply-btn">Reply</button>' +
       '<div class="comment-reply-form" style="display:none;">' +
         '<form>' +
-          '<div class="form-row-3">' +
+          '<div class="form-row">' +
             '<input type="text" name="name" placeholder="Name" required class="form-input">' +
             '<input type="email" name="email" placeholder="Email (not published)" required class="form-input">' +
-            '<select name="role" class="form-select" required>' +
-              '<option value="reader">Reader</option>' +
-              '<option value="owner">Owner</option>' +
-            '</select>' +
           '</div>' +
           '<textarea name="comment" placeholder="Write your reply..." required class="form-textarea" rows="3"></textarea>' +
           '<div class="reply-actions">' +
