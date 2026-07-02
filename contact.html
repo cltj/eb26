@@ -4,31 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Placeholder</title>
-  <link rel="stylesheet" href="style.css?v=31">
+  <link rel="stylesheet" href="style.css?v=32">
 </head>
 <body>
 
-  <header class="masthead">
-    <div class="container-wide">
-      <div class="masthead-inner">
-        <a href="index.html" class="site-title"><span class="title-initial">P</span>laceholder</a>
-        <p class="site-tagline">Placeholder subtitle</p>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="archive.html" class="nav-link">Archive</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-      <button class="burger-btn" onclick="document.querySelector('.burger-menu').classList.toggle('open')" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <div class="burger-menu">
-        <a href="index.html">Home</a>
-        <a href="archive.html">Archive</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </header>
+  <header class="masthead" data-page="contact"></header>
 
   <main class="container">
 
@@ -56,20 +36,7 @@
     </div>
   </footer>
 
-  <script>
-    const masthead = document.querySelector('.masthead');
-    window.addEventListener('scroll', () => {
-      masthead.classList.toggle('collapsed', window.scrollY > 80);
-      const bm = document.querySelector('.burger-menu');
-      if (bm) bm.classList.remove('open');
-    });
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.burger-btn') && !e.target.closest('.burger-menu')) {
-        const bm = document.querySelector('.burger-menu');
-        if (bm) bm.classList.remove('open');
-      }
-    });
-  </script>
+  <script src="nav.js"></script>
 
 </body>
 </html>
