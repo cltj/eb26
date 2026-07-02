@@ -108,12 +108,25 @@ body {
   gap: 16px;
 }
 
-.site-icon-placeholder {
-  width: 24px;
-  height: 24px;
-  background: #c0b248;
-  border-radius: 4px;
+.site-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   flex-shrink: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-gold {
+  background: #c0b248;
+}
+
+.dot-black {
+  background: #111;
 }
 
 .title-initial {
@@ -1353,9 +1366,13 @@ body {
     gap: 8px;
   }
 
-  .site-icon-placeholder {
-    width: 16px;
-    height: 16px;
+  .site-dots {
+    gap: 3px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
   }
 
   .site-title {
