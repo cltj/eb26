@@ -111,13 +111,20 @@ body {
 .site-icon-placeholder {
   width: 24px;
   height: 24px;
-  background: #8b0000;
+  background: #c0b248;
   border-radius: 4px;
   flex-shrink: 0;
 }
 
 .title-initial {
-  background: #f1c40f;
+  background: #c0b248;
+  color: #111;
+  padding: 0 6px;
+  margin-right: 1px;
+}
+
+.title-second {
+  background: #8b0000;
   color: #111;
   padding: 0 6px;
   margin-right: 1px;
